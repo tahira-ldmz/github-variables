@@ -1,12 +1,12 @@
 name: EnvExample
 on:
   push:
-env:
-  APP_NAME: myapp
 jobs:
-  demo:
+  build:
     runs-on: ubuntu-latest
+    env:
+      COURSE: DevOps
     steps:
-    - name: Print Variable
-      run: echo $APP_NAME
+    - name: job-level-variable
+      run: echo $COURSE
 
