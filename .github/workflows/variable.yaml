@@ -2,11 +2,11 @@ name: EnvExample
 on:
   push:
 jobs:
-  build:
+  buildone:
     runs-on: ubuntu-latest
-    env:
-      COURSE: DevOps
     steps:
-    - name: job-level-variable
-      run: echo $COURSE
+    - name: step-level-variable
+      env:
+        NAME: Tahira
+      run: echo $NAME
 
