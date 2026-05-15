@@ -1,0 +1,12 @@
+name: EnvExample
+on:
+  push:
+env:
+  APP_NAME: myapp
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Variable
+      run: echo $APP_NAME
+
